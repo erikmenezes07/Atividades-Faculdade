@@ -1,0 +1,21 @@
+class Veiculo:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+
+    def ligar(self):
+        print(f"{self.marca} {self.modelo} está ligado.")
+
+    def acelerar(self, velocidade):
+        print(f"{self.marca} {self.modelo} está acelerando a {velocidade} km/h.")
+
+    def frear(self):
+        print(f"{self.marca} {self.modelo} está freando.")
+        
+
+meu_carro = Veiculo("FIAT", "STRADA", 2020)
+
+meu_carro.ligar()
+meu_carro.acelerar(80)
+meu_carro.frear()
