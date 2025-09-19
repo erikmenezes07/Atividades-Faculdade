@@ -1,0 +1,22 @@
+class Aluno:
+    def exibir_dados(self):
+        print(f"Aluno: {self.nome}")
+        print(f"Matrícula: {self.matricula}")
+        print(f"Nota: {self.nota}")
+
+    def atualizar_nota(self, nova_nota):
+        self.nota = nova_nota
+
+from aluno import Aluno
+
+aluno1 = Aluno()
+
+aluno1.nome = "Erik"
+aluno1.matricula = "01848032"
+aluno1.nota = 6.0
+
+aluno1.exibir_dados()
+
+aluno1.atualizar_nota(10)
+
+aluno1.exibir_dados()
