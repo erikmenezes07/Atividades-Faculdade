@@ -1,0 +1,12 @@
+temperatura = float(input("Digite a temperatura: "))
+
+if temperatura > 40:
+    print("Estamos derretendo!")
+elif temperatura > 30:
+    print("Calor!")
+elif temperatura == 0:
+    print("Tá muito frio")
+elif temperatura > 0 and temperatura < 20:
+    print("Ainda tá frio")
+else:
+    print("A temperatura está agradável")
