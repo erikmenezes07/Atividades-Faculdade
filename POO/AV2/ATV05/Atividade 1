@@ -5,10 +5,17 @@ print(numeros)
 #Q2
 
 numeros=list((2,4,6,8,10))
-print("primeiro:", numeros [0], "do meio:", numeros [3], "ultimo:", numeros [4])
+print("primeiro:", numeros [0], "do meio:", numeros [2], "ultimo:", numeros [4])
 
 #Q3
 
 numeros=list((2,4,6,8,10))
 numeros[4] = 15
+print (numeros)
+
+#Q4
+
+numeros=list((2,4,6,8,10))
+numeros.append(12)
+numeros.append(14)
 print (numeros)
