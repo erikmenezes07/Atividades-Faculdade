@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MeuApp());
+}
+
+class MeuApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: TelaBotoes(),
+    );
+  }
+}
+
+class TelaBotoes extends StatelessWidget {
+
+  void mostrarMensagem(BuildContext context, String mensagem) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(mensagem),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Exemplo de Botões'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            ElevatedButton(
+              onPressed: () {
+                mostrarMensagem(context, 'Você clicou no botão Clicar');
+              },
+              child: Text('Clicar'),
+            ),
+
+            SizedBox(height: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                mostrarMensagem(context, 'Você pressionou o botão Entrar');
+              },
+              child: Text('Entrar'),
+            ),
+
+            SizedBox(height: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                mostrarMensagem(context, 'Você pressionou o botão Voltar');
+              },
+              child: Text('Voltar'),
+            ),
+
+            SizedBox(height: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                mostrarMensagem(context, 'Você pressionou o botão Sair');
+              },
+              child: Text('Sair'),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
